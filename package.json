@@ -1,0 +1,44 @@
+{
+  "name": "@jdevega/mockingjay",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "module": "./src/modules/server.js",
+  "main": "./src/modules/server.js",
+  "scripts": {
+    "release:dry": "npm run release -- --dry-run",
+    "release": "standard-version --skip.tag",
+    "lint:eslint": "eslint --ext .js,.html .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/modules/server.js",
+    "start:watch": "nodemon ./src/modules/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bin": {
+    "mockingjay": "./src/modules/server.js",
+    "mj": "./src/modules/server.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.13",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1",
+    "standard-version": "^9.3.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "glob": "^7.2.0",
+    "yargs": "^17.3.0"
+  }
+}
